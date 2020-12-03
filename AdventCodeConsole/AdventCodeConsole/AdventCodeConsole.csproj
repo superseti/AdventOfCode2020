@@ -51,6 +51,9 @@
     <Compile Include="SecondDay\PasswordPolicy.cs" />
     <Compile Include="SecondDay\PasswordPolicyInfo.cs" />
     <Compile Include="SecondDay\SecondDayResolver.cs" />
+    <Compile Include="ThirdDay\MovementRule.cs" />
+    <Compile Include="ThirdDay\Point.cs" />
+    <Compile Include="ThirdDay\ThirdDayResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
