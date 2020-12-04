@@ -44,6 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FirstDayResolver.cs" />
+    <Compile Include="FourthDay\FourthDayResolver.cs" />
+    <Compile Include="FourthDay\IPassportValidator.cs" />
+    <Compile Include="FourthDay\PassportField.cs" />
+    <Compile Include="FourthDay\PassportInfo.cs" />
+    <Compile Include="FourthDay\StrictPassportValidator.cs" />
+    <Compile Include="FourthDay\PassportValidator.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

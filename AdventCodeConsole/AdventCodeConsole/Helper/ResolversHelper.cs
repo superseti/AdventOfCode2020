@@ -1,4 +1,5 @@
-﻿using AdventCodeConsole.SecondDay;
+﻿using AdventCodeConsole.FourthDay;
+using AdventCodeConsole.SecondDay;
 using AdventCodeConsole.ThirdDay;
 
 namespace AdventCodeConsole.Helper
@@ -10,7 +11,8 @@ namespace AdventCodeConsole.Helper
             return new IResolverWrapper[] {
                 new ResolverWrapper<FirstDayResolver>(),
                 new ResolverWrapper<SecondDayResolver>(),
-                new ResolverWrapper<ThirdDayResolver>()
+                new ResolverWrapper<ThirdDayResolver>(),
+                new ResolverWrapper<FourthDayResolver>()
             };
         }
     }
