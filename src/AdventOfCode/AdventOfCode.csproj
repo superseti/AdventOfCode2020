@@ -48,6 +48,11 @@
     <Compile Include="Day04\PassportInfo.cs" />
     <Compile Include="Day04\PassportValidator.cs" />
     <Compile Include="Day04\StrictPassportValidator.cs" />
+    <Compile Include="Day05\BinaryInfoResolver.cs" />
+    <Compile Include="Day05\ColumnSeatResolver.cs" />
+    <Compile Include="Day05\FifthDayResolver.cs" />
+    <Compile Include="Day05\RowSeatResolver.cs" />
+    <Compile Include="Day05\SeatInfo.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,5 +63,6 @@
     <Compile Include="Day03\Point.cs" />
     <Compile Include="Day03\ThirdDayResolver.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
