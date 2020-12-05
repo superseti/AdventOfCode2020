@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace AdventCodeConsole.Helpers
+namespace AdventOfCode.Helpers
 {
     class InputDataReader
     {

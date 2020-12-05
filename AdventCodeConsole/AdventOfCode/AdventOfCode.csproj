@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E1E5976-31EB-4EC0-9172-F79ADC041823}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>AdventCodeConsole</RootNamespace>
-    <AssemblyName>AdventCodeConsole</AssemblyName>
+    <ProjectGuid>{CB7BC275-F9DB-4E50-9225-88FE07C11317}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdventOfCode</RootNamespace>
+    <AssemblyName>AdventOfCode</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,32 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Day01\FirstDayResolver.cs" />
+    <Compile Include="Day04\FourthDayResolver.cs" />
+    <Compile Include="Day04\IPassportValidator.cs" />
+    <Compile Include="Day04\PassportField.cs" />
+    <Compile Include="Day04\PassportInfo.cs" />
+    <Compile Include="Day04\PassportValidator.cs" />
+    <Compile Include="Day04\StrictPassportValidator.cs" />
+    <Compile Include="Helpers\InputDataReader.cs" />
+    <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Helpers\ResolversHelper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="InputDataFiles\Fourth.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputDataFiles\First.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputDataFiles\Third.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputDataFiles\Second.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj">
-      <Project>{cb7bc275-f9db-4e50-9225-88fe07c11317}</Project>
-      <Name>AdventOfCode</Name>
-    </ProjectReference>
+    <Compile Include="Day02\PasswordPolicy.cs" />
+    <Compile Include="Day02\PasswordPolicyInfo.cs" />
+    <Compile Include="Day02\SecondDayResolver.cs" />
+    <Compile Include="Day03\MovementRule.cs" />
+    <Compile Include="Day03\Point.cs" />
+    <Compile Include="Day03\ThirdDayResolver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

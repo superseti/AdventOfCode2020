@@ -1,4 +1,4 @@
-﻿namespace AdventCodeConsole.FourthDay
+﻿namespace AdventOfCode.Day04
 {
     class PassportField
     {

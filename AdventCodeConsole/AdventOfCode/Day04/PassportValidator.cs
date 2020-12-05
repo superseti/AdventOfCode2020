@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace AdventCodeConsole.FourthDay
+namespace AdventOfCode.Day04
 {
     class PassportValidator: IPassportValidator
     {

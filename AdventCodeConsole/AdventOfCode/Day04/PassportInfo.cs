@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace AdventCodeConsole.FourthDay
+namespace AdventOfCode.Day04
 {
     class PassportInfo
     {

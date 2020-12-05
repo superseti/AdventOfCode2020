@@ -1,8 +1,8 @@
-﻿using AdventCodeConsole.Helpers;
+﻿using AdventOfCode.Helpers;
 using System;
 using System.Linq;
 
-namespace AdventCodeConsole.SecondDay
+namespace AdventOfCode.Day02
 {
     class SecondDayResolver: IResolver
     {

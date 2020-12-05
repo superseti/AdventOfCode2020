@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdventCodeConsole.SecondDay
+﻿namespace AdventOfCode.Day02
 {
     internal class PasswordPolicyInfo<T>
      where T : PasswordPolicy, new()

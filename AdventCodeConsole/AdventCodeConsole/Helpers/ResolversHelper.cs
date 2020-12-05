@@ -1,36 +1,30 @@
-﻿using AdventCodeConsole.FourthDay;
-using AdventCodeConsole.SecondDay;
-using AdventCodeConsole.ThirdDay;
+﻿using AdventOfCode;
+using System;
+using System.Linq;
 
 namespace AdventCodeConsole.Helpers
 {
     class ResolversHelper
     {
-        public IResolverWrapper[] GetResolvers()
+        public ResolverWrapper[] GetResolvers()
         {
-            return new IResolverWrapper[] {
-                new ResolverWrapper<FirstDayResolver>(),
-                new ResolverWrapper<SecondDayResolver>(),
-                new ResolverWrapper<ThirdDayResolver>(),
-                new ResolverWrapper<FourthDayResolver>()
-            };
+            var iResolverType = typeof(IResolver);
+            var iResolverTypes = iResolverType.Assembly
+                    .GetTypes()
+                    .Where(type => type.GetInterface(iResolverType.FullName) == iResolverType)
+                    .OrderBy(type => type.FullName);
+            return iResolverTypes.Select(type => new ResolverWrapper(type)).ToArray();
         }
     }
-
-    public interface IResolverWrapper
+    public class ResolverWrapper
     {
-        string Description { get; }
-        IResolver GetResolver();
-    }
-
-    public class ResolverWrapper<T>: IResolverWrapper
-        where T: IResolver, new()
-    {
-        public ResolverWrapper()
+        internal ResolverWrapper(Type resolverType)
         {
-            this.Description = typeof(T).Name.Replace("DayResolver", "");
+            this.ResolverType = resolverType;
+            this.Description = this.ResolverType.Name.Replace("DayResolver", "");
         }
         public string Description { get; private set; }
-        public IResolver GetResolver() => new T();
+        public Type ResolverType { get; private set; }
+        public IResolver GetResolver() => Activator.CreateInstance(this.ResolverType) as IResolver;
     }
 }

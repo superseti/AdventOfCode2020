@@ -1,4 +1,4 @@
-﻿namespace AdventCodeConsole.ThirdDay
+﻿namespace AdventOfCode.Day03
 {
     class MovementRule
     {

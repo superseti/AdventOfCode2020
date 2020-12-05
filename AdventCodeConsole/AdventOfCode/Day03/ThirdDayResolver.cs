@@ -1,7 +1,7 @@
-﻿using AdventCodeConsole.Helpers;
+﻿using AdventOfCode.Helpers;
 using System;
 
-namespace AdventCodeConsole.ThirdDay
+namespace AdventOfCode.Day03
 {
     /// <summary>
     /// --- Day 3: Toboggan Trajectory ---

@@ -1,11 +1,12 @@
 ﻿using AdventCodeConsole.Helpers;
+using AdventOfCode;
 using System;
 
 namespace AdventCodeConsole
 {
     class Program
     {
-        private static IResolverWrapper[] resolvers;
+        private static ResolverWrapper[] resolvers;
         private static string menuOptions;
         static void Main(string[] args)
         {
