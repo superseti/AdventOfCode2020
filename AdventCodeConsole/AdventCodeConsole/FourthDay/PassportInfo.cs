@@ -8,7 +8,7 @@ namespace AdventCodeConsole.FourthDay
         public PassportInfo(string passportsInfo)
         {
             var data = passportsInfo
-                .Replace("\r\n", " ")
+                .Replace("\n", " ")
                 .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             this.Fields = data.Select(info => new PassportField(info)).ToArray();
         }

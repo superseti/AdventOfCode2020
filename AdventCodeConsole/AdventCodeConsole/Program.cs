@@ -1,4 +1,4 @@
-﻿using AdventCodeConsole.Helper;
+﻿using AdventCodeConsole.Helpers;
 using System;
 
 namespace AdventCodeConsole

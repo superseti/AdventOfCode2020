@@ -2,7 +2,7 @@
 using AdventCodeConsole.SecondDay;
 using AdventCodeConsole.ThirdDay;
 
-namespace AdventCodeConsole.Helper
+namespace AdventCodeConsole.Helpers
 {
     class ResolversHelper
     {

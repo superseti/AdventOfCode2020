@@ -50,10 +50,11 @@
     <Compile Include="FourthDay\PassportInfo.cs" />
     <Compile Include="FourthDay\StrictPassportValidator.cs" />
     <Compile Include="FourthDay\PassportValidator.cs" />
+    <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Helper\ResolversHelper.cs" />
+    <Compile Include="Helpers\ResolversHelper.cs" />
     <Compile Include="SecondDay\PasswordPolicy.cs" />
     <Compile Include="SecondDay\PasswordPolicyInfo.cs" />
     <Compile Include="SecondDay\SecondDayResolver.cs" />
@@ -64,6 +65,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="InputDataFiles\Fourth.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputDataFiles\First.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputDataFiles\Third.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputDataFiles\Second.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
