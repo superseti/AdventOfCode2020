@@ -1,8 +1,7 @@
-﻿using AdventCodeConsole.Helpers;
-using AdventOfCode;
+﻿using AdventOfCode.Launcher.Helpers;
 using System;
 
-namespace AdventCodeConsole
+namespace AdventOfCode.Launcher
 {
     class Program
     {

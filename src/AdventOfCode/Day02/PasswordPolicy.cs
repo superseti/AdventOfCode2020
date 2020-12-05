@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AdventOfCode.Day02
 {
-    internal class PasswordPolicyFirst : PasswordPolicy
+    public class PasswordPolicyFirst : PasswordPolicy
     {
         public override bool IsPasswordValid(string password)
         {
@@ -13,7 +13,7 @@ namespace AdventOfCode.Day02
         }
     }
 
-    internal class PasswordPolicySecond : PasswordPolicy
+    public class PasswordPolicySecond : PasswordPolicy
     {
         public override bool IsPasswordValid(string password)
         {
@@ -25,7 +25,7 @@ namespace AdventOfCode.Day02
         }
     }
 
-    internal abstract class PasswordPolicy
+    public abstract class PasswordPolicy
     {
         public void Initialize(string info)
         {

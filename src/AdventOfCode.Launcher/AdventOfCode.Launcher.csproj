@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E1E5976-31EB-4EC0-9172-F79ADC041823}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AdventCodeConsole</RootNamespace>
-    <AssemblyName>AdventCodeConsole</AssemblyName>
+    <RootNamespace>AdventOfCode.Launcher</RootNamespace>
+    <AssemblyName>AdventOfCode.Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

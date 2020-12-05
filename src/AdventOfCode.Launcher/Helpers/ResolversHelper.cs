@@ -1,8 +1,7 @@
-﻿using AdventOfCode;
-using System;
+﻿using System;
 using System.Linq;
 
-namespace AdventCodeConsole.Helpers
+namespace AdventOfCode.Launcher.Helpers
 {
     class ResolversHelper
     {
