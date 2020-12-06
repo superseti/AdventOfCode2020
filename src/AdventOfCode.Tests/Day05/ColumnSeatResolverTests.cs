@@ -3,11 +3,11 @@ using Xunit;
 
 namespace AdventOfCode.Tests.Day05
 {
-    public class ColumnSeatResolverTests
+    public class GroupAnswerAcumulatorTests
     {
         private ColumnSeatResolver sut;
 
-        public ColumnSeatResolverTests()
+        public GroupAnswerAcumulatorTests()
         {
             this.sut = new ColumnSeatResolver();
         }

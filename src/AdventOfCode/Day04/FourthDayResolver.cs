@@ -135,9 +135,7 @@ Count the number of valid passports - those that have all required fields and va
 
         private IEnumerable<PassportInfo> GetPassports()
         {
-            var passportsInputData = new InputDataReader().GetInputData(this);
-            var passports = passportsInputData
-                .Split(new string[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var passports = new InputDataReader().GetInputDataSplittedByBlankLine(this);
             return passports.Select(info => new PassportInfo(info));
         }
     }

@@ -53,6 +53,11 @@
     <Compile Include="Day05\FifthDayResolver.cs" />
     <Compile Include="Day05\RowSeatResolver.cs" />
     <Compile Include="Day05\SeatInfo.cs" />
+    <Compile Include="Day06\AnswersAcumulator.cs" />
+    <Compile Include="Day06\GroupAnswerIntersectAcumulator.cs" />
+    <Compile Include="Day06\GroupAnswerAcumulator.cs" />
+    <Compile Include="Day06\IGroupAnswerAcumulator.cs" />
+    <Compile Include="Day06\SixthDayResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

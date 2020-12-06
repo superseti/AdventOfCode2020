@@ -13,6 +13,12 @@ namespace AdventOfCode.Helpers
 
             var fileInputData = Path.Combine(basePath, "InputDataFiles", fileInputDataName);
 
+            if (!File.Exists(fileInputData)) 
+            {
+                Console.WriteLine("File not found");
+                return string.Empty; 
+            }
+
             return File.ReadAllText(fileInputData)
                 .Replace("\r\n", "\n");
         }
@@ -21,6 +27,12 @@ namespace AdventOfCode.Helpers
         {
            return GetInputData(resolver)
                 .Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        public string[] GetInputDataSplittedByBlankLine(IResolver resolver)
+        {
+           return GetInputData(resolver)
+                .Split(new string[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
