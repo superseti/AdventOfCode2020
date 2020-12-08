@@ -58,6 +58,11 @@
     <Compile Include="Day06\GroupAnswerAcumulator.cs" />
     <Compile Include="Day06\IGroupAnswerAcumulator.cs" />
     <Compile Include="Day06\SixthDayResolver.cs" />
+    <Compile Include="Day07\BagContainDetector.cs" />
+    <Compile Include="Day07\BagContainerDetector.cs" />
+    <Compile Include="Day07\BagContainInfo.cs" />
+    <Compile Include="Day07\ContainLevelInfo.cs" />
+    <Compile Include="Day07\SeventhDayResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
