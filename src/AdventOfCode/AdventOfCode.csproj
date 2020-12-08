@@ -63,6 +63,13 @@
     <Compile Include="Day07\BagContainInfo.cs" />
     <Compile Include="Day07\ContainLevelInfo.cs" />
     <Compile Include="Day07\SeventhDayResolver.cs" />
+    <Compile Include="Day08\ChangeInfo.cs" />
+    <Compile Include="Day08\ChangeWizard.cs" />
+    <Compile Include="Day08\EighthDayResolver.cs" />
+    <Compile Include="Day08\ProgramExecutor.cs" />
+    <Compile Include="Day08\ProgramLine.cs" />
+    <Compile Include="Day08\ProgramReader.cs" />
+    <Compile Include="Day08\ProgramState.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
