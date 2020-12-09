@@ -70,6 +70,11 @@
     <Compile Include="Day08\ProgramLine.cs" />
     <Compile Include="Day08\ProgramReader.cs" />
     <Compile Include="Day08\ProgramState.cs" />
+    <Compile Include="Day09\Decomponer.cs" />
+    <Compile Include="Day09\ElementsFinder.cs" />
+    <Compile Include="Day09\NinethDayResolver.cs" />
+    <Compile Include="Day09\NumberNonXmasFinder.cs" />
+    <Compile Include="Day09\NumberNonXmasFinderInfo.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
