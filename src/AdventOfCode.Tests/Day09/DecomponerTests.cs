@@ -10,7 +10,7 @@ namespace AdventOfCode.Tests.Day09
     {
         [ClassData(typeof(DecomponerData))]
         [Theory]
-        public void IsPossibleToDecompone_ShouldWorks(Int64 Number, Int64[] possibleElements, bool expectedResult)
+        public void IsPossibleToDecompone_ShouldWork(Int64 Number, Int64[] possibleElements, bool expectedResult)
         {
             var result = new Decomponer().IsPossibleDecompone(Number, possibleElements);
 

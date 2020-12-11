@@ -9,7 +9,7 @@ namespace AdventOfCode.Tests.Day05
         [InlineData("FFFBBBFRRR", 14, 7)]
         [InlineData("BBFFBBFRLL", 102, 4)]
         [Theory]
-        public void Ctor_ShouldWorks(string seatInfoStr, int rowExpected, int columnExpected)
+        public void Ctor_ShouldWork(string seatInfoStr, int rowExpected, int columnExpected)
         {
             var result = new SeatInfo(seatInfoStr, new ColumnSeatResolver(), new RowSeatResolver());
 

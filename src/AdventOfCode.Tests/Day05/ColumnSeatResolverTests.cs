@@ -16,7 +16,7 @@ namespace AdventOfCode.Tests.Day05
         [InlineData("RLL", 4)]
         [InlineData("RLR", 5)]
         [Theory]
-        public void Resolve_ShouldWorks(string columnInfo, int columnExpected)
+        public void Resolve_ShouldWork(string columnInfo, int columnExpected)
         {
             var result = this.sut.Resolve(columnInfo);
 

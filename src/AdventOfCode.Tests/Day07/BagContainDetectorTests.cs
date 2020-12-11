@@ -18,7 +18,7 @@ namespace AdventOfCode.Tests.Day07
 
         [MemberData(nameof(BagsRulesTestsData.GetRulesFromShinyBag), MemberType = typeof(BagsRulesTestsData))]
         [Theory]
-        public void GetContainNumberElements_ShouldWorks(string rule, int containExpected)
+        public void GetContainNumberElements_ShouldWork(string rule, int containExpected)
         {
             var result = this.sut.GetContainNumberElements(rule, this.bagCarried);
 

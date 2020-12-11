@@ -14,7 +14,7 @@ namespace AdventOfCode.Tests.Day06
 
         [ClassData(typeof(GroupIntersectAnswersInfoData))]
         [Theory]
-        public void GetYesAnswers_ShouldWorks(string answersInfo, char[] answersExpected)
+        public void GetYesAnswers_ShouldWork(string answersInfo, char[] answersExpected)
         {
             var result = this.sut.GetYesAnswers(answersInfo);
 

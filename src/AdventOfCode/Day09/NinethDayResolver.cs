@@ -117,10 +117,7 @@ What is the encryption weakness in your XMAS-encrypted list of numbers?
 
         private Int64[] GetInputData()
         {
-            return new InputDataReader()
-                .GetInputDataSplitted(this)
-                .Select(line => Convert.ToInt64(line))
-                .ToArray();
+            return new InputDataReader().GetInputDataSplitted(this, line => Convert.ToInt64(line));
         }
     }
 }

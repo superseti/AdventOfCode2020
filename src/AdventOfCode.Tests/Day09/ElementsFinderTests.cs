@@ -9,7 +9,7 @@ namespace AdventOfCode.Tests.Day09
     {
         [ClassData(typeof(ComponerData))]
         [Theory]
-        public void GetElementsToAdd_ShouldWorks(Int64 number, Int64[] preamble, Int64 minNumber, Int64 maxNumber)
+        public void GetElementsToAdd_ShouldWork(Int64 number, Int64[] preamble, Int64 minNumber, Int64 maxNumber)
         {
             var result = new ElementsFinder().GetElementsToAdd(number, preamble);
 

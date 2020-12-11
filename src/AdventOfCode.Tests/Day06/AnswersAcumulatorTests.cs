@@ -14,7 +14,7 @@ namespace AdventOfCode.Tests.Day06
 
         [ClassData(typeof(AnswersInfoData))]
         [Theory]
-        public void GetYesAnswers_ShouldWorks(string[] answersInfo, int expectedCount)
+        public void GetYesAnswers_ShouldWork(string[] answersInfo, int expectedCount)
         {
             var result = this.sut.GetCountYesAnswers<GroupAnswerAcumulator>(answersInfo);
 
@@ -23,7 +23,7 @@ namespace AdventOfCode.Tests.Day06
 
         [ClassData(typeof(AnswersIntersectInfoData))]
         [Theory]
-        public void GetYesAnswersIntersect_ShouldWorks(string[] answersInfo, int expectedCount)
+        public void GetYesAnswersIntersect_ShouldWork(string[] answersInfo, int expectedCount)
         {
             var result = this.sut.GetCountYesAnswers<GroupAnswerIntersectAcumulator>(answersInfo);
 

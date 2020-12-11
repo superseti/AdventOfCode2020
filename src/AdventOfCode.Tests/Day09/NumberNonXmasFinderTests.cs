@@ -8,7 +8,7 @@ namespace AdventOfCode.Tests.Day09
     public class NumberNonXmasFinderTests
     {
         [Fact]
-        public void GetNumberNonXmas_ShouldWorks()
+        public void GetNumberNonXmas_ShouldWork()
         {
             var inputData = new Int64[] {
             35,

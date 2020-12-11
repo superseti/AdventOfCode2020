@@ -75,6 +75,13 @@
     <Compile Include="Day09\NinethDayResolver.cs" />
     <Compile Include="Day09\NumberNonXmasFinder.cs" />
     <Compile Include="Day09\NumberNonXmasFinderInfo.cs" />
+    <Compile Include="Day10\ArrangementScopeNode.cs" />
+    <Compile Include="Day10\ArrangementNode.cs" />
+    <Compile Include="Day10\JoltsInfo.cs" />
+    <Compile Include="Day10\JoltsArrangementsFinder.cs" />
+    <Compile Include="Day10\JoltsDifferenceFinder.cs" />
+    <Compile Include="Day10\JoltsDifferencesInfo.cs" />
+    <Compile Include="Day10\TenthDayResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -17,7 +17,7 @@ namespace AdventOfCode.Tests.Day05
         [InlineData("FFFBBBF", 14)]
         [InlineData("BBFFBBF", 102)]
         [Theory]
-        public void Resolve_ShouldWorks(string rowInfo, int columnExpected)
+        public void Resolve_ShouldWork(string rowInfo, int columnExpected)
         {
             int result = this.sut.Resolve(rowInfo);
 

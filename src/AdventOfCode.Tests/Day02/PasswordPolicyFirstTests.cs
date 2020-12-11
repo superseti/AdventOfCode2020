@@ -16,7 +16,7 @@ namespace AdventOfCode.Tests.Day02
         [InlineData("1-3 b", "cdefg", false)]
         [InlineData("2-9 c", "ccccccccc", true)]
         [Theory]
-        public void IsPasswordValid_ShouldWorks(string policyInfo, string password, bool isValid)
+        public void IsPasswordValid_ShouldWork(string policyInfo, string password, bool isValid)
         {
             this.sut.Initialize(policyInfo);
 

@@ -42,7 +42,7 @@ In your expense report, what is the product of the three entries that sum to 202
 
         public void ResolveFirst()
         {
-            var numbers = this.GetNumbersInputData();
+            var numbers = new InputDataReader().GetInputDataSplittedAsInt(this);
             for (int ixFirst = 0; ixFirst < numbers.Length - 2; ixFirst++)
             {
                 var firstNumber = numbers[ixFirst];
@@ -61,7 +61,7 @@ In your expense report, what is the product of the three entries that sum to 202
 
         public void ResolveSecond()
         {
-            var numbers = this.GetNumbersInputData();
+            var numbers = new InputDataReader().GetInputDataSplittedAsInt(this);
 
             for (int ixFirst = 0; ixFirst < numbers.Length - 2; ixFirst++)
             {
@@ -80,13 +80,6 @@ In your expense report, what is the product of the three entries that sum to 202
                     }
                 }
             }
-        }
-
-        private int[] GetNumbersInputData()
-        {
-            var numbersStr = new InputDataReader().GetInputDataSplitted(this);
-
-            return numbersStr.Select(numberStr => Int32.Parse(numberStr)).ToArray();
         }
     }
 }
