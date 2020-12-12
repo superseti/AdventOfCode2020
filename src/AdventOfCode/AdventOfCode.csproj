@@ -82,6 +82,12 @@
     <Compile Include="Day10\JoltsDifferenceFinder.cs" />
     <Compile Include="Day10\JoltsDifferencesInfo.cs" />
     <Compile Include="Day10\TenthDayResolver.cs" />
+    <Compile Include="Day11\BusyRulesChecker.cs" />
+    <Compile Include="Day11\EleventhDayResolver.cs" />
+    <Compile Include="Day11\IBusyChecker.cs" />
+    <Compile Include="Day11\Location.cs" />
+    <Compile Include="Day11\SeatLayoutInfo.cs" />
+    <Compile Include="Day11\SeatsTurnHandler.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

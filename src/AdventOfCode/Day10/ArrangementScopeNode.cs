@@ -1,45 +1,33 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace AdventOfCode.Day10
 {
     class ArrangementScopeNode
     {
-        public ArrangementScopeNode(ArrangementScopeNode parent, int joltIndex, ref int[] jolts)
+        public ArrangementScopeNode(int joltIndex, int[] jolts)
         {
-            this.Parent = parent;
+            this.JoltsJumpeables = new List<int>();
             this.JoltIndex = joltIndex;
             this.Joltage = jolts[this.JoltIndex];
-            this.Children = new List<ArrangementScopeNode>();
             this.DetermineScope(jolts);
         }
-        public ArrangementScopeNode Parent { get; private set; }
 
         public int JoltIndex { get; private set; }
         public int Joltage { get; private set; }
-        public List<ArrangementScopeNode> Children { get; private set; }
-
-        public int GetNumberOfArrangement()
-        {
-            if (this.Children.Count == 0) { return 1; }
-
-            return this.Children.Sum(child => child.GetNumberOfArrangement());
-        }
+        public List<int> JoltsJumpeables { get; private set; }
 
         private void DetermineScope(int[] jolts)
         {
             if (this.JoltIndex >= jolts.Length - 2) { return; }
 
-            var ixChildren = this.JoltIndex + 1;
-            this.Children.Add(new ArrangementScopeNode(this, ixChildren, ref jolts));
+            var ixChildren = this.JoltIndex + 2;
 
-            ixChildren++;
             var nextNextJoltage = jolts[ixChildren];
             var difference = nextNextJoltage - this.Joltage;
 
             if (difference > 3) { return; }
 
-            this.Children.Add(new ArrangementScopeNode(this, ixChildren, ref jolts));
+            this.JoltsJumpeables.Add(jolts[ixChildren - 1]);
 
             ixChildren++;
 
@@ -48,7 +36,10 @@ namespace AdventOfCode.Day10
                 var nextNextNextJoltage = jolts[ixChildren];
                 difference = nextNextNextJoltage - this.Joltage;
 
-                if (difference <= 3) { this.Children.Add(new ArrangementScopeNode(this, ixChildren, ref jolts)); }
+                if (difference <= 3)
+                {
+                    this.JoltsJumpeables.Add(jolts[ixChildren - 1]);
+                }
             }
         }
     }
