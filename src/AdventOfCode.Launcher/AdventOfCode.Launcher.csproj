@@ -84,6 +84,9 @@
     <Content Include="InputDataFiles\Second.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="InputDataFiles\Twelfth.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj">

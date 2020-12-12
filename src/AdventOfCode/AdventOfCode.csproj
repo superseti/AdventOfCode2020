@@ -88,6 +88,13 @@
     <Compile Include="Day11\Location.cs" />
     <Compile Include="Day11\SeatLayoutInfo.cs" />
     <Compile Include="Day11\SeatsTurnHandler.cs" />
+    <Compile Include="Day12\IInstructionsInterpreter.cs" />
+    <Compile Include="Day12\InstructionsInterpreterWayPoint.cs" />
+    <Compile Include="Day12\InstructionsInterpreter.cs" />
+    <Compile Include="Day12\Orientations.cs" />
+    <Compile Include="Day12\Ship.cs" />
+    <Compile Include="Day12\OrientationsState.cs" />
+    <Compile Include="Day12\TwelfthDayResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
