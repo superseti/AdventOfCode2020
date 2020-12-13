@@ -88,14 +88,14 @@ To find the encryption weakness, add together the smallest and largest number in
 
 What is the encryption weakness in your XMAS-encrypted list of numbers?
          */
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var firstNonXmas = this.GetFirstNonXmasNumber(this.GetInputData());
 
-            Console.WriteLine($"first non xmas number: {firstNonXmas.Number}");
+            return $"first non xmas number: {firstNonXmas.Number}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var inputData = this.GetInputData();
 
@@ -107,7 +107,7 @@ What is the encryption weakness in your XMAS-encrypted list of numbers?
             var maxElement = elements.Max();
             var minElement = elements.Min();
 
-            Console.WriteLine($"Elements for non xmas number. Min: {minElement}, Max: {maxElement}. Sum: {minElement + maxElement}");
+            return $"Elements for non xmas number. Min: {minElement}, Max: {maxElement}. Sum: {minElement + maxElement}";
         }
 
         private NumberNonXmasFinderInfo GetFirstNonXmasNumber(Int64[] inputData)

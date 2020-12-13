@@ -5,7 +5,7 @@ namespace AdventOfCode.Day11
 {
     public class EleventhDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var inputData = new InputDataReader().GetInputDataSplitted(this);
             var info = new SeatLayoutInfo(inputData);
@@ -15,10 +15,10 @@ namespace AdventOfCode.Day11
 
             while (handler.HandleTurn(info, chequer)) { }
 
-            Console.WriteLine($"Busy end seats: {info.GetNumberOfSeatsBusy()}");
+            return $"{info.GetNumberOfSeatsBusy()}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             throw new NotImplementedException();
         }

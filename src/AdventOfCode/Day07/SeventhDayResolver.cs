@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AdventOfCode.Day07
+﻿namespace AdventOfCode.Day07
 {
     /*
      * --- Day 7: Handy Haversacks ---
@@ -65,22 +63,22 @@ How many individual bags are required inside your single shiny gold bag?
      */
     public class SeventhDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var myBag = "shiny gold";
             var inputData = new Helpers.InputDataReader().GetInputData(this);
             var result = new BagContainerDetector().GetBagContainers(inputData, myBag);
 
-            Console.WriteLine($"different colours: {result?.Length}");
+            return $"{result?.Length}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var myBag = "shiny gold";
             var inputData = new Helpers.InputDataReader().GetInputData(this);
             var result = new BagContainDetector().GetContainNumberElements(inputData, myBag);
 
-            Console.WriteLine($"number of elements: {result}");
+            return $"{result}";
         }
     }
 }

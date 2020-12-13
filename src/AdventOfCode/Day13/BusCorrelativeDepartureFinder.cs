@@ -24,7 +24,6 @@ namespace AdventOfCode.Day13
             }
 
             return this.GetFirstValidTime(reducedInfo[1], firstBus);
-
         }
 
         private Int64 GetFirstValidTime(BusDepartInfo info, BusDepartInfo infoReference)
@@ -37,9 +36,6 @@ namespace AdventOfCode.Day13
             }
             return 0;
         }
-
-        private bool IsValid(List<BusDepartInfo> buses) => buses.All(bus => bus.IsValidForPattern);
-        private void GoToNextPoint(Int64 nextPoint, List<BusDepartInfo> buses) => buses.ForEach(bus => bus.GoToNextPoint(nextPoint));
 
         private List<BusDepartInfo> GetBusesDepartures(string listBusIds)
         {

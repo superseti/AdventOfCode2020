@@ -114,7 +114,7 @@ What is the earliest timestamp such that all of the listed bus IDs depart at off
      */
     public class ThirteenthDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var inputData = new Helpers.InputDataReader().GetInputDataSplitted(this);
             var busFinder = new BusFinder()
@@ -124,17 +124,17 @@ What is the earliest timestamp such that all of the listed bus IDs depart at off
 
             var result = busFinder.FindBus(inputData[1]);
 
-            Console.WriteLine($"busId: {result.IdBus}, minutesWaiting: {result.MinutesWaiting} -> {result.IdBus * result.MinutesWaiting}");
+            return $"{result.IdBus * result.MinutesWaiting}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var inputData = new Helpers.InputDataReader().GetInputDataSplitted(this);
             var busFinder = new BusCorrelativeDepartureFinder();
 
             var result = busFinder.FindCorrelativeDeparture(inputData[1]);
 
-            Console.WriteLine($"{result}");
+            return $"{result}";
         }
     }
 }

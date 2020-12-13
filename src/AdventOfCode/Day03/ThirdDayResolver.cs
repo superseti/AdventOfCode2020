@@ -3,7 +3,7 @@ using System;
 
 namespace AdventOfCode.Day03
 {
-    /// <summary>
+    /*
     /// --- Day 3: Toboggan Trajectory ---
     //    With the toboggan login problems resolved, you set off toward the airport.While travel by toboggan might be easy, it's certainly not safe: there's very minimal steering and the area is covered in trees.You'll need to see which angles will take you near the fewest trees.
 
@@ -73,7 +73,7 @@ namespace AdventOfCode.Day03
     //In the above example, these slopes would find 2, 7, 3, 4, and 2 tree(s) respectively; multiplied together, these produce the answer 336.
 
     //What do you get if you multiply together the number of trees encountered on each of the listed slopes ?
-    /// </summary>
+    */
     class ThirdDayResolver : IResolver
     {
         private readonly string[] treePattern;
@@ -83,7 +83,7 @@ namespace AdventOfCode.Day03
             this.treePattern = new InputDataReader().GetInputDataSplitted(this);
         }
 
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             MovementRule movementRule = new MovementRule()
             {
@@ -92,7 +92,7 @@ namespace AdventOfCode.Day03
             };
             var numberOfTrees = GetNumberOfTrees(movementRule);
 
-            Console.WriteLine($"Number of Trees: {numberOfTrees}");
+            return $"{numberOfTrees}";
         }
 
         private Int64 GetNumberOfTrees(MovementRule movementRule)
@@ -145,7 +145,7 @@ namespace AdventOfCode.Day03
             return result;
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             MovementRule movementRule1 = new MovementRule()
             {
@@ -178,7 +178,7 @@ namespace AdventOfCode.Day03
             var numberOfTrees4 = GetNumberOfTrees(movementRule4);
             var numberOfTrees5 = GetNumberOfTrees(movementRule5);
 
-            Console.WriteLine($"{numberOfTrees1} * {numberOfTrees2} * {numberOfTrees3} * {numberOfTrees4} * {numberOfTrees5} = {numberOfTrees1 * numberOfTrees2 * numberOfTrees3 * numberOfTrees4 * numberOfTrees5}");
+            return $"{numberOfTrees1} * {numberOfTrees2} * {numberOfTrees3} * {numberOfTrees4} * {numberOfTrees5} = {numberOfTrees1 * numberOfTrees2 * numberOfTrees3 * numberOfTrees4 * numberOfTrees5}";
         }
     }
 }

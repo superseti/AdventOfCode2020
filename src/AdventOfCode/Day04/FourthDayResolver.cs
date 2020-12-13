@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Helpers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -120,17 +119,17 @@ Count the number of valid passports - those that have all required fields and va
      */
     class FourthDayResolver : IResolver
     {
-        public void ResolveFirst() => this.Resolve<PassportValidator>();
-        public void ResolveSecond() => this.Resolve<StrictPassportValidator>();
+        public string ResolveFirst() => this.Resolve<PassportValidator>();
+        public string ResolveSecond() => this.Resolve<StrictPassportValidator>();
 
-        private void Resolve<T>()
+        private string Resolve<T>()
             where T : IPassportValidator, new()
         {
             IPassportValidator validator = new T();
             var passports = this.GetPassports();
             var numberOfPassportsValid = passports.Count(passport => validator.IsValid(passport));
 
-            Console.WriteLine($"Valid Passports: {numberOfPassportsValid}");
+            return $"{numberOfPassportsValid}";
         }
 
         private IEnumerable<PassportInfo> GetPassports()

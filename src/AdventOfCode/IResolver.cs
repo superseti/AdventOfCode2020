@@ -2,7 +2,7 @@
 {
     public interface IResolver
     {
-        void ResolveFirst();
-        void ResolveSecond();
+        string ResolveFirst();
+        string ResolveSecond();
     }
 }

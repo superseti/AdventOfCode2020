@@ -1,12 +1,9 @@
 ﻿using AdventOfCode.Helpers;
-using System;
 using System.Linq;
 
 namespace AdventOfCode.Day02
 {
-    class SecondDayResolver: IResolver
-    {
-        /*
+    /*
          * --- Day 2: Password Philosophy ---
 Your flight departs in a few days from the coastal airport; the easiest way down to the coast from here is via toboggan.
 
@@ -43,18 +40,19 @@ Given the same example list from above:
 2-9 c: ccccccccc is invalid: both position 2 and position 9 contain c.
 How many passwords are valid according to the new interpretation of the policies?
          */
+    class SecondDayResolver : IResolver
+    {
+        public string ResolveFirst() => this.Resolve<PasswordPolicyFirst>();
+        public string ResolveSecond() => this.Resolve<PasswordPolicySecond>();
 
-        public void ResolveFirst() => this.Resolve<PasswordPolicyFirst>();
-        public void ResolveSecond() => this.Resolve<PasswordPolicySecond>();
-
-        private void Resolve<T>()
-            where T: PasswordPolicy, new()
+        private string Resolve<T>()
+            where T : PasswordPolicy, new()
         {
             var passwords = new InputDataReader().GetInputDataSplitted(this);
             var numberOfCorrectPasswords =
                 passwords.Count(passPolicy => new PasswordPolicyInfo<T>(passPolicy).IsValid);
 
-            Console.WriteLine($"Correct passwords: {numberOfCorrectPasswords}");
+            return "{numberOfCorrectPasswords}";
         }
     }
 }

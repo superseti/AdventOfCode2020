@@ -51,10 +51,10 @@ namespace AdventOfCode.Launcher
         static void Resolve(IResolver resolver)
         {
             Console.WriteLine("First star");
-            resolver.ResolveFirst();
+            Console.WriteLine(resolver.ResolveFirst());
             Console.ReadLine();
             Console.WriteLine("Second star");
-            resolver.ResolveSecond();
+            Console.WriteLine(resolver.ResolveSecond());
             Console.WriteLine();
             Console.WriteLine("press any key to begin again");
             Console.ReadLine();

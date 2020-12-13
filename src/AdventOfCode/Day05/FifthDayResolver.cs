@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Helpers;
-using System;
 using System.Linq;
 
 namespace AdventOfCode.Day05
@@ -58,7 +57,7 @@ Your puzzle answer was 524.
      */
     public class FifthDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var seatsInfoInput = new InputDataReader().GetInputDataSplitted(this);
             ColumnSeatResolver columnResolver = new ColumnSeatResolver();
@@ -70,10 +69,10 @@ Your puzzle answer was 524.
 
             var seatInfoHighest = seatInfos.First();
 
-            Console.WriteLine($"Column: {seatInfoHighest.Column}, Row {seatInfoHighest.Row}. Id: {seatInfoHighest.Id}");
+            return $"Column: {seatInfoHighest.Column}, Row {seatInfoHighest.Row}. Id: {seatInfoHighest.Id}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var seatsInfoInput = new InputDataReader().GetInputDataSplitted(this);
             ColumnSeatResolver columnResolver = new ColumnSeatResolver();
@@ -92,10 +91,10 @@ Your puzzle answer was 524.
                 if (seatInfos[ixSeat].Id != expectedId)
                 {
                     var mySeatId = seatInfos[ixSeat].Id - 1;
-                    Console.WriteLine($"My seatId: {mySeatId}");
-                    return;
+                    return $"My seatId: {mySeatId}";
                 }
             }
+            return string.Empty;
         }
     }
 }

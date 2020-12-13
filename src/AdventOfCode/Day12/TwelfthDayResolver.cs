@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Helpers;
-using System;
 
 namespace AdventOfCode.Day12
 {
@@ -69,24 +68,24 @@ Your puzzle answer was 24769.
      */
     public class TwelfthDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var inputData = new InputDataReader().GetInputDataSplitted(this);
             var ship = new Ship<InstructionsInterpreter>();
             ship.ReadInstructions(inputData);
 
 
-            Console.WriteLine($"Manhathan Distance: {ship.GetManhathanDistance()}");
+            return $"Manhathan Distance: {ship.GetManhathanDistance()}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var inputData = new InputDataReader().GetInputDataSplitted(this);
             var ship = new Ship<InstructionsInterpreterWayPoint>();
             ship.ReadInstructions(inputData);
 
 
-            Console.WriteLine($"Manhathan Distance: {ship.GetManhathanDistance()}");
+            return $"Manhathan Distance: {ship.GetManhathanDistance()}";
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Helpers;
-using System;
 
 namespace AdventOfCode.Day06
 {
@@ -38,18 +37,18 @@ For each group, count the number of questions to which everyone answered "yes". 
      */
     public class SixthDayResolver : IResolver
     {
-        public void ResolveFirst() => Resolve<GroupAnswerAcumulator>();
-        public void ResolveSecond() => Resolve<GroupAnswerIntersectAcumulator>();
+        public string ResolveFirst() => Resolve<GroupAnswerAcumulator>();
+        public string ResolveSecond() => Resolve<GroupAnswerIntersectAcumulator>();
 
         private string[] GetAnswers() => new InputDataReader().GetInputDataSplittedByBlankLine(this);
 
-        private void Resolve<T>()
+        private string Resolve<T>()
             where T : IGroupAnswerAcumulator, new()
         {
             var numberOfYesAnswers =
                    new AnswersAcumulator().GetCountYesAnswers<T>(this.GetAnswers());
 
-            Console.WriteLine($"yes count: {numberOfYesAnswers}");
+            return $"{numberOfYesAnswers}";
         }
     }
 }

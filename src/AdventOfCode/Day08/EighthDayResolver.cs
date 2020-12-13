@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AdventOfCode.Day08
+﻿namespace AdventOfCode.Day08
 {
     /*
      * --- Day 8: Handheld Halting ---
@@ -86,22 +84,22 @@ Your puzzle answer was 892.
      */
     public class EighthDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var programLines = new Helpers.InputDataReader().GetInputData(this);
             var executor = new ProgramExecutor(programLines);
             executor.ExecuteTillLoopOrEnd();
 
-            Console.WriteLine($"Accumlator Value when loop: {executor.State.AccumulatorValue}");
+            return $"{executor.State.AccumulatorValue}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var programLines = new Helpers.InputDataReader().GetInputData(this);
             var wizard = new ChangeWizard(programLines);
             var change = wizard.DetectChange();
 
-            Console.WriteLine($"Change line: {change.LineNumber}. Accumlator Value: {change.AccumulatorValue}");
+            return $"Change line: {change.LineNumber}. Accumlator Value: {change.AccumulatorValue}";
         }
     }
 }

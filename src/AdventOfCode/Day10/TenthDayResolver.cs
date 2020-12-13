@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Helpers;
-using System;
 
 namespace AdventOfCode.Day10
 {
@@ -143,20 +142,20 @@ What is the total number of distinct ways you can arrange the adapters to connec
      */
     public class TenthDayResolver : IResolver
     {
-        public void ResolveFirst()
+        public string ResolveFirst()
         {
             var inputData = new InputDataReader().GetInputDataSplittedAsInt(this);
             var info = new JoltsDifferenceFinder(inputData).DifferencesInfo;
 
-            Console.WriteLine($"Jolts Info (1 * 3): {info.NumberOfOneJoltDifference} * {info.NumberOfThreeJoltsDifference} = {info.NumberOfOneJoltDifference * info.NumberOfThreeJoltsDifference}");
+            return $"{info.NumberOfOneJoltDifference} * {info.NumberOfThreeJoltsDifference} = {info.NumberOfOneJoltDifference * info.NumberOfThreeJoltsDifference}";
         }
 
-        public void ResolveSecond()
+        public string ResolveSecond()
         {
             var inputData = new InputDataReader().GetInputDataSplittedAsInt(this);
             var arrangements = new JoltsArrangementsFinder(inputData).NumberOfArrangements;
 
-            Console.WriteLine($"Jolts arrangements: {arrangements}");
+            return $"Jolts arrangements: {arrangements}";
         }
     }
 }
