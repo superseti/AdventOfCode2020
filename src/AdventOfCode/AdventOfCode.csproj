@@ -95,6 +95,11 @@
     <Compile Include="Day12\Ship.cs" />
     <Compile Include="Day12\OrientationsState.cs" />
     <Compile Include="Day12\TwelfthDayResolver.cs" />
+    <Compile Include="Day13\BusCorrelativeDepartureFinder.cs" />
+    <Compile Include="Day13\BusDepartInfo.cs" />
+    <Compile Include="Day13\BusDepartWaitingInfo.cs" />
+    <Compile Include="Day13\BusFinder.cs" />
+    <Compile Include="Day13\ThirteenthDayResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
