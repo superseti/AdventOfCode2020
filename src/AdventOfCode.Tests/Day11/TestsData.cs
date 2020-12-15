@@ -34,22 +34,46 @@ namespace AdventOfCode.Tests.Day11
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
-    
-    class OccupedSeatsV2Data : IEnumerable<object[]>
+
+    class OccupedSeatsAmpliedData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {
             yield return new object[] {new string[]{
-                "#.L#.L#.L#",
-"#LLLLLL.LL",
-"L.L.L..#..",
-"##L#.#L.L#",
-"L.L#.#L.L#",
-"#.L####.LL",
+                            "L.LL.LL.LL",
+            "LLLLLLL.LL",
+            "L.L.L..L..",
+            "LLLL.LL.LL",
+            "L.LL.LL.LL",
+            "L.LLLLL.LL",
+            "..L.L.....",
+            "LLLLLLLLLL",
+            "L.LLLLLL.L",
+            "L.LLLLL.LL" }, 71};
+
+            yield return new object[] {new string[]{
+"#.##.##.##",
+"#######.##",
+"#.#.#..#..",
+"####.##.##",
+"#.##.##.##",
+"#.#####.##",
 "..#.#.....",
-"LLL###LLL#",
-"#.LLLLL#.L",
-"#.L#LL#.L#" }, 26};
+"##########",
+"#.######.#",
+"#.#####.##" }, 7};
+
+            yield return new object[] {new string[]{
+"#.L#.##.L#",
+"#L#####.LL",
+"L.#.#..#..",
+"##L#.##.##",
+"#.##.#L.##",
+"#.#####.#L",
+"..#.#.....",
+"LLL####LL#",
+"#.L#####.L",
+"#.L####.L#" }, 18 };
         }
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();

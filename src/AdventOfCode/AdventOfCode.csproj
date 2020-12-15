@@ -83,6 +83,7 @@
     <Compile Include="Day10\JoltsDifferencesInfo.cs" />
     <Compile Include="Day10\TenthDayResolver.cs" />
     <Compile Include="Day11\BusyRulesChecker.cs" />
+    <Compile Include="Day11\BusyRulesCheckerAmplied.cs" />
     <Compile Include="Day11\EleventhDayResolver.cs" />
     <Compile Include="Day11\IBusyChecker.cs" />
     <Compile Include="Day11\Location.cs" />

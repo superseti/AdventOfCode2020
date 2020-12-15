@@ -25,12 +25,12 @@ namespace AdventOfCode.Tests.Day11
             Assert.Equal(expectedBusySeats, busySeats);
         }
 
-        [ClassData(typeof(OccupedSeatsV2Data))]
+        [ClassData(typeof(OccupedSeatsAmpliedData))]
         [Theory]
-        public void HandleTurn_With5_ShouldWork(string[] input, int expectedBusySeats)
+        public void HandleTurn_WithAmpliedRules_ShouldWork(string[] input, int expectedBusySeats)
         {
             SeatLayoutInfo info = new SeatLayoutInfo(input);
-            IBusyChecker chequer = new BusyRulesChecker(info);
+            IBusyChecker chequer = new BusyRulesCheckerAmplied(info);
 
             this.sut.HandleTurn(info, chequer);
 
