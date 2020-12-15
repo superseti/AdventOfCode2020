@@ -105,6 +105,10 @@
     <Compile Include="Day14\InstructionsInterpreter.cs" />
     <Compile Include="Day14\ProgramState.cs" />
     <Compile Include="Day14\ValueCalculator.cs" />
+    <Compile Include="Day15\FifteenthDayResolver.cs" />
+    <Compile Include="Day15\GameHandler.cs" />
+    <Compile Include="Day15\GameState.cs" />
+    <Compile Include="Day15\NumberAparitions.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
