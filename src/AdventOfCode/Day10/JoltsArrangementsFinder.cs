@@ -10,42 +10,44 @@ namespace AdventOfCode.Day10
         {
             this.Info = new JoltsInfo(jolts);
 
-            List<ArrangementScopeNode> nodes = new List<ArrangementScopeNode>();
-            //List<int> jolstJumpleables = new List<int>();
+            this.NumberOfArrangements = new ArrangementNode(null, 0, this.Info.Jolts).NumberOfArrangements;
 
-            for (int ixJoly = 0; ixJoly < jolts.Length; ixJoly++)
-            {
-                var node = new ArrangementScopeNode(ixJoly, jolts);
-                if (node.JoltsJumpeables.Count > 0)
-                {
-                    nodes.Add(node);
-                    //jolstJumpleables.AddRange(node.JoltsJumpeables);
-                }
-            }
+            //List<ArrangementNode> nodes = new List<ArrangementNode>();
+            ////List<int> jolstJumpleables = new List<int>();
 
-            var elementsCount = nodes
-                .SelectMany(node => node.JoltsJumpeables)
-                .GroupBy(item => item)
-                .Where(group => group.Count() == 1)
-                .Count(); //jolstJumpleables.Distinct().Count();
+            //for (int ixJoly = 0; ixJoly < jolts.Length; ixJoly++)
+            //{
+            //    var node = new ArrangementScopeNode(ixJoly, jolts);
+            //    if (node.JoltsJumpeables.Count > 0)
+            //    {
+            //        nodes.Add(node);
+            //        //jolstJumpleables.AddRange(node.JoltsJumpeables);
+            //    }
+            //}
 
-            this.NumberOfArrangements = 1;
-            if (elementsCount > 0)
-            {
-                //var numberOfElements = nodes.Sum(node => node.NumberOfItemsJumpeables);
-                this.NumberOfArrangements = Math.Pow(2, elementsCount);
-            }
+            //var elementsCount = nodes
+            //    .SelectMany(node => node.JoltsJumpeables)
+            //    .GroupBy(item => item)
+            //    .Where(group => group.Count() == 1)
+            //    .Count(); //jolstJumpleables.Distinct().Count();
 
-            var withTwoElements = nodes.Where(node => node.JoltsJumpeables.Count == 2);
+            //this.NumberOfArrangements = 1;
+            //if (elementsCount > 0)
+            //{
+            //    //var numberOfElements = nodes.Sum(node => node.NumberOfItemsJumpeables);
+            //    this.NumberOfArrangements = Math.Pow(2, elementsCount);
+            //}
 
-            if (withTwoElements.Count() > 0)
-            {
-                var elements = withTwoElements.SelectMany(node => node.JoltsJumpeables);
-                var nonIncluded = nodes.Where(node => node.JoltsJumpeables.Intersect(elements).Count() == 0);
-                elementsCount = withTwoElements.Count() + nonIncluded.Count();
+            //var withTwoElements = nodes.Where(node => node.JoltsJumpeables.Count == 2);
+
+            //if (withTwoElements.Count() > 0)
+            //{
+            //    var elements = withTwoElements.SelectMany(node => node.JoltsJumpeables);
+            //    var nonIncluded = nodes.Where(node => node.JoltsJumpeables.Intersect(elements).Count() == 0);
+            //    elementsCount = withTwoElements.Count() + nonIncluded.Count();
                 
-                this.NumberOfArrangements += Math.Pow(2, elementsCount); //this.GetFactorial(elementsCount);
-            }
+            //    this.NumberOfArrangements += Math.Pow(2, elementsCount); //this.GetFactorial(elementsCount);
+            //}
 
             //for (int ixJumpeable = 1; ixJumpeable <= itemsJumpable; ixJumpeable++)
             //{
