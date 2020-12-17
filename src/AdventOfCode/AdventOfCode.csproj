@@ -110,6 +110,15 @@
     <Compile Include="Day15\GameHandler.cs" />
     <Compile Include="Day15\GameState.cs" />
     <Compile Include="Day15\NumberAparitions.cs" />
+    <Compile Include="Day16\ErrorRateCalculator.cs" />
+    <Compile Include="Day16\FieldDetected.cs" />
+    <Compile Include="Day16\FieldDetector.cs" />
+    <Compile Include="Day16\SixteenthDayResolver.cs" />
+    <Compile Include="Day16\Ticket.cs" />
+    <Compile Include="Day16\TicketRule.cs" />
+    <Compile Include="Day16\TicketRules.cs" />
+    <Compile Include="Day16\TicketsConverter.cs" />
+    <Compile Include="Day16\TicketValue.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
