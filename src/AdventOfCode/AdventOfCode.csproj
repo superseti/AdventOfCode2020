@@ -123,6 +123,11 @@
     <Compile Include="Day16\TicketRules.cs" />
     <Compile Include="Day16\TicketsConverter.cs" />
     <Compile Include="Day16\TicketValue.cs" />
+    <Compile Include="Day17\CubesState.cs" />
+    <Compile Include="Day17\CubesTurnHandler.cs" />
+    <Compile Include="Day17\Location.cs" />
+    <Compile Include="Day17\SeventeethDayResolver.cs" />
+    <Compile Include="Day17\ZCubeLayer.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

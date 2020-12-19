@@ -72,6 +72,7 @@
     <Content Include="InputDataFiles\Eleventh.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="InputDataFiles\Seventeeth.txt" />
     <Content Include="InputDataFiles\Sixteenth.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
