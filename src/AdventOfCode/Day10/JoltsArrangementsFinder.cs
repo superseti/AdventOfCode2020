@@ -8,66 +8,45 @@ namespace AdventOfCode.Day10
     {
         public JoltsArrangementsFinder(int[] jolts)
         {
-            this.Info = new JoltsInfo(jolts);
+            var nodes = this.GetNodes(jolts);
 
-            this.NumberOfArrangements = new ArrangementNode(null, 0, this.Info.Jolts).NumberOfArrangements;
+            this.NumberOfArrangements = 1;
 
-            //List<ArrangementNode> nodes = new List<ArrangementNode>();
-            ////List<int> jolstJumpleables = new List<int>();
-
-            //for (int ixJoly = 0; ixJoly < jolts.Length; ixJoly++)
-            //{
-            //    var node = new ArrangementScopeNode(ixJoly, jolts);
-            //    if (node.JoltsJumpeables.Count > 0)
-            //    {
-            //        nodes.Add(node);
-            //        //jolstJumpleables.AddRange(node.JoltsJumpeables);
-            //    }
-            //}
-
-            //var elementsCount = nodes
-            //    .SelectMany(node => node.JoltsJumpeables)
-            //    .GroupBy(item => item)
-            //    .Where(group => group.Count() == 1)
-            //    .Count(); //jolstJumpleables.Distinct().Count();
-
-            //this.NumberOfArrangements = 1;
-            //if (elementsCount > 0)
-            //{
-            //    //var numberOfElements = nodes.Sum(node => node.NumberOfItemsJumpeables);
-            //    this.NumberOfArrangements = Math.Pow(2, elementsCount);
-            //}
-
-            //var withTwoElements = nodes.Where(node => node.JoltsJumpeables.Count == 2);
-
-            //if (withTwoElements.Count() > 0)
-            //{
-            //    var elements = withTwoElements.SelectMany(node => node.JoltsJumpeables);
-            //    var nonIncluded = nodes.Where(node => node.JoltsJumpeables.Intersect(elements).Count() == 0);
-            //    elementsCount = withTwoElements.Count() + nonIncluded.Count();
-                
-            //    this.NumberOfArrangements += Math.Pow(2, elementsCount); //this.GetFactorial(elementsCount);
-            //}
-
-            //for (int ixJumpeable = 1; ixJumpeable <= itemsJumpable; ixJumpeable++)
-            //{
-            //    this.NumberOfArrangements *= ixJumpeable;
-            //}
-
-            //this.NumberOfArrangements = new ArrangementScopeNode(null, 0, ref jolts).GetNumberOfArrangement();
-        }
-
-        private int GetFactorial(int number)
-        {
-            var result = 1;
-            for (int ixNumber = number; ixNumber > 1; ixNumber--)
+            while (nodes.Count > 0)
             {
-                result *= ixNumber;
+                var node = nodes[0];
+                //this.NumberOfArrangements += node.JoltsPositionsJumpeables.Count;
+                var restNodes = this.GetNonCoincidentNodes(nodes, node);
+                var resConnections = restNodes.Sum(nodex => nodex.JoltsPositionsJumpeables.Count);
+                this.NumberOfArrangements += Math.Pow(2, resConnections) * node.JoltsPositionsJumpeables.Count;
+
+                nodes.RemoveAt(0);
             }
-            return result;
         }
 
-        public JoltsInfo Info { get; private set; }
+        private List<ArrangementScopeNode> GetNodes(int[] jolts)
+        {
+            Array.Sort(jolts);
+            List<ArrangementScopeNode> nodes = new List<ArrangementScopeNode>();
+
+            for (int ixJoly = 0; ixJoly < jolts.Length; ixJoly++)
+            {
+                var node = new ArrangementScopeNode(ixJoly, jolts);
+                if (node.JoltsPositionsJumpeables.Count > 0)
+                {
+                    nodes.Add(node);
+                }
+            }
+            return nodes;
+        }
+
+        private IEnumerable<ArrangementScopeNode> GetNonCoincidentNodes(List<ArrangementScopeNode> nodes, ArrangementScopeNode currentNode)
+        {
+            return nodes
+                .Skip(1)
+                .Where(node => currentNode.JoltsPositionsJumpeables.All(ixJolt => !node.JoltsPositionsJumpeables.Contains(ixJolt)));
+        }
+
 
         public double NumberOfArrangements { get; private set; }
     }

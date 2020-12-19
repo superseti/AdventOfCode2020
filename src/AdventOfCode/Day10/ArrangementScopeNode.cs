@@ -6,7 +6,7 @@ namespace AdventOfCode.Day10
     {
         public ArrangementScopeNode(int joltIndex, int[] jolts)
         {
-            this.JoltsJumpeables = new List<int>();
+            this.JoltsPositionsJumpeables = new List<int>();
             this.JoltIndex = joltIndex;
             this.Joltage = jolts[this.JoltIndex];
             this.DetermineScope(jolts);
@@ -14,7 +14,7 @@ namespace AdventOfCode.Day10
 
         public int JoltIndex { get; private set; }
         public int Joltage { get; private set; }
-        public List<int> JoltsJumpeables { get; private set; }
+        public List<int> JoltsPositionsJumpeables { get; private set; }
 
         private void DetermineScope(int[] jolts)
         {
@@ -27,7 +27,7 @@ namespace AdventOfCode.Day10
 
             if (difference > 3) { return; }
 
-            this.JoltsJumpeables.Add(jolts[ixChildren - 1]);
+            this.JoltsPositionsJumpeables.Add(ixChildren - 1);
 
             ixChildren++;
 
@@ -38,7 +38,7 @@ namespace AdventOfCode.Day10
 
                 if (difference <= 3)
                 {
-                    this.JoltsJumpeables.Add(jolts[ixChildren - 1]);
+                    this.JoltsPositionsJumpeables.Add(ixChildren - 1);
                 }
             }
         }
