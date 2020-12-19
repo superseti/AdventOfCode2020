@@ -7,7 +7,7 @@ namespace AdventOfCode.Day14
 {
     public class ValueCalculator
     {
-        private Dictionary<char, Func<char, char>> handlers;
+        private readonly Dictionary<char, Func<char, char>> handlers;
         public ValueCalculator()
         {
             this.Converter = new BinaryConverter();

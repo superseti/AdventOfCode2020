@@ -103,8 +103,12 @@
     <Compile Include="Day13\ThirteenthDayResolver.cs" />
     <Compile Include="Day14\BinaryConverter.cs" />
     <Compile Include="Day14\FourteenthDayResolver.cs" />
+    <Compile Include="Day14\IInstructionsInterpreter.cs" />
+    <Compile Include="Day14\InstructionsInterpreterV2.cs" />
     <Compile Include="Day14\InstructionsInterpreter.cs" />
+    <Compile Include="Day14\ProgramStateV2.cs" />
     <Compile Include="Day14\ProgramState.cs" />
+    <Compile Include="Day14\MemoryPositionsCalculator.cs" />
     <Compile Include="Day14\ValueCalculator.cs" />
     <Compile Include="Day15\FifteenthDayResolver.cs" />
     <Compile Include="Day15\GameHandler.cs" />

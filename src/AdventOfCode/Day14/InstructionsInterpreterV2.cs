@@ -3,21 +3,21 @@ using System.Linq;
 
 namespace AdventOfCode.Day14
 {
-    public class InstructionsInterpreter : IInstructionsInterpreter
+    public class InstructionsInterpreterV2 : IInstructionsInterpreter
     {
         public Int64 Interpret(string[] instructions)
         {
-            ProgramState state = new ProgramState();
+            ProgramStateV2 state = new ProgramStateV2();
 
             foreach (var instruction in instructions)
             {
                 this.InterpreteInstruction(instruction, state);
             }
 
-            return state.Values.Sum(entry => state.Calculator.Converter.ToDecimal(entry.Value));
+            return state.Values.Sum(entry => (Int64)entry.Value);
         }
 
-        private void InterpreteInstruction(string instruction, ProgramState state)
+        private void InterpreteInstruction(string instruction, ProgramStateV2 state)
         {
             var data = instruction.Split('=');
             var instructionType = data[0].Trim();
@@ -29,8 +29,12 @@ namespace AdventOfCode.Day14
                 return;
             }
 
-            var memoryPosition = int.Parse(data[0].Substring(4).Replace("]", ""));
-            state.Values[memoryPosition] = state.Calculator.GetValueToApply(int.Parse(value));
+            var memoryPositions = state.Calculator.GetMemoryPositions(data[0]);
+
+            foreach (var memoryPosition in memoryPositions)
+            {
+                state.Values[memoryPosition] = Int64.Parse(value);
+            }
         }
     }
 }
