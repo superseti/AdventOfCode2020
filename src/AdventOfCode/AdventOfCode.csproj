@@ -134,6 +134,11 @@
     <Compile Include="Day18\GroupResolverAdvanced.cs" />
     <Compile Include="Day18\GroupResolver.cs" />
     <Compile Include="Day18\IGroupResolver.cs" />
+    <Compile Include="Day19\NineteethDayResolver.cs" />
+    <Compile Include="Day19\Rule.cs" />
+    <Compile Include="Day19\RulesContainer.cs" />
+    <Compile Include="Day19\RuleGroup.cs" />
+    <Compile Include="Day19\RuleValidationResult.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
