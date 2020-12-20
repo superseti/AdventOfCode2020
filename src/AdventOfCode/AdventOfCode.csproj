@@ -128,6 +128,12 @@
     <Compile Include="Day17\Location.cs" />
     <Compile Include="Day17\SeventeethDayResolver.cs" />
     <Compile Include="Day17\ZCubeLayer.cs" />
+    <Compile Include="Day18\EighteenthDayResolver.cs" />
+    <Compile Include="Day18\GroupResolved.cs" />
+    <Compile Include="Day18\GroupResolvedAdvanced.cs" />
+    <Compile Include="Day18\GroupResolverAdvanced.cs" />
+    <Compile Include="Day18\GroupResolver.cs" />
+    <Compile Include="Day18\IGroupResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
