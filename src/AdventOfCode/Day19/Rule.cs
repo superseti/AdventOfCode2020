@@ -59,7 +59,7 @@ namespace AdventOfCode.Day19
 
             var result = new RuleValidationResult()
             {
-                Success = message[index] == this.letter,
+                Success = message.Length > index && message[index] == this.letter,
                 FinalIndex = index + 1
             };
 
