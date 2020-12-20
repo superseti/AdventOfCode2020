@@ -21,5 +21,15 @@ namespace AdventOfCode.Tests.Day19
 
             Assert.Equal(expected, result);
         }
+
+        [ClassData(typeof(RulesContainerTestsData))]
+        [Theory]
+        public void CountValidMessages_ShouldWork(string[] rulesLines, string[] messages, int expected)
+        {
+            this._sut.Init(rulesLines);
+            var result = this._sut.CountValidMessages(messages);
+
+            Assert.Equal(expected, result);
+        }
     }
 }

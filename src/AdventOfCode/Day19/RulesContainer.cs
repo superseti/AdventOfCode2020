@@ -16,5 +16,10 @@ namespace AdventOfCode.Day19
         public Rule GetRule(int ixRule) => this.rules[ixRule];
 
         public bool IsMessageValid(string message) => this.GetRule(0).IsMessageValid(message);
+
+        public int CountValidMessages(string[] messages)
+        {
+            return messages.Count(message => this.IsMessageValid(message));
+        }
     }
 }

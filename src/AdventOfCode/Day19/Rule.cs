@@ -57,9 +57,11 @@ namespace AdventOfCode.Day19
                 };
             }
 
+            var isValid = message.Length > index && message[index] == this.letter;
+
             var result = new RuleValidationResult()
             {
-                Success = message.Length > index && message[index] == this.letter,
+                Success = isValid,
                 FinalIndex = index + 1
             };
 
