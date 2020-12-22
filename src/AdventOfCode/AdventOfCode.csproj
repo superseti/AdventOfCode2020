@@ -139,6 +139,15 @@
     <Compile Include="Day19\RulesContainer.cs" />
     <Compile Include="Day19\RuleGroup.cs" />
     <Compile Include="Day19\RuleValidationResult.cs" />
+    <Compile Include="Day20\ConcatenatorTiles.cs" />
+    <Compile Include="Day20\LinesUpChecker.cs" />
+    <Compile Include="Day20\LinesUpResult.cs" />
+    <Compile Include="Day20\ManipulaterTiles.cs" />
+    <Compile Include="Day20\MonsterFinder.cs" />
+    <Compile Include="Day20\Tile.cs" />
+    <Compile Include="Day20\TilePosition.cs" />
+    <Compile Include="Day20\TilesArrangator.cs" />
+    <Compile Include="Day20\TwentiethDayResolver.cs" />
     <Compile Include="Helpers\InputDataReader.cs" />
     <Compile Include="IResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
